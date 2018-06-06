@@ -1,5 +1,9 @@
-from scene import *
+# Ethan Armstrong
+# w.ethan.armstrong@gmail.com
+# explosion33
+# June 5, 2018
 
+from scene import *
 
 class createFrog (Node):
 	def __init__(self,tilesW,tilesH,sceneSize):
@@ -11,6 +15,4 @@ class createFrog (Node):
 		self.add_child(frog)
 		self.position = (488.73, self.size[1]/4)
 		self.tile = ((self.position[0]/(sceneSize[0]/tilesW)), int(self.position[1]/(sceneSize[1]/tilesH)))
-		print(self.tile)
-	
-					
+		print(self.tile)			

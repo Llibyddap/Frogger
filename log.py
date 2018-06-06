@@ -1,3 +1,8 @@
+# Ethan Armstrong
+# w.ethan.armstrong@gmail.com
+# explosion33
+# June 5, 2018
+
 from scene import *
 from random import randint
 
@@ -38,7 +43,6 @@ class createLog(Node):
 			self.position = (self.sizeS[0], (self.sizeS[1]/self.tilesS) * self.tile)
 			moveAction = Action.move_to(0 - self.size[0], self.position[1], self.rowSpeed, TIMING_LINEAR)
 			
-						
 		r = Action.remove()
 		
 		self.Action = Action.sequence(moveAction, r)
@@ -47,7 +51,6 @@ class createLog(Node):
 		self.addSpots()
 						
 		self.run_action(self.Action)
-		
 	
 	def addLog(self):
 		log = SpriteNode()
@@ -68,8 +71,3 @@ class createLog(Node):
 			box.position = (0 + (self.size[0]/4 * i), 0)
 			self.add_child(box)
 			self.squares.append(box)	
-											
-		
-								
-			
-		

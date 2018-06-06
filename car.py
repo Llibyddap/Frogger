@@ -1,3 +1,8 @@
+# Ethan Armstrong
+# w.ethan.armstrong@gmail.com
+# explosion33
+# June 5, 2018
+
 from scene import *
 
 class createCar (Node):
@@ -9,7 +14,6 @@ class createCar (Node):
 		self.tilesH = tilesH
 		self.tilesW = tilesW
 		self.size = (self.sceneSize[1]/self.tilesH * 1.97, self.sceneSize[1]/self.tilesH)
-		
 		
 		if type == 1:
 			texture = Texture('car1.PNG')
@@ -44,9 +48,6 @@ class createCar (Node):
 			move = Action.move_to(0 ,self.position[1], speed, TIMING_LINEAR)
 			remove = Action.remove()	
 		
-		
-		
-		
 		car = SpriteNode()
 		car.texture = texture
 		car.position = (0,0)
@@ -56,10 +57,5 @@ class createCar (Node):
 		
 		print((self.size[1], self.tilesH, self.type))
 		
-		
 		sequence = Action.sequence(move, remove)
 		self.run_action(sequence)
-			
-			
-			
-			

@@ -1,3 +1,8 @@
+# Ethan Armstrong
+# w.ethan.armstrong@gmail.com
+# explosion33
+# June 5, 2018
+
 # This module implements the menu that is used by all game examples. It doesn't do much by itself.
 
 from scene import *
@@ -55,7 +60,6 @@ class MenuScene (Scene):
 			if touch_loc in btn.frame:
 				sound.play_effect('8ve:8ve-tap-resonant')
 				btn.texture = Texture('pzl:Button2')
-			
 	
 	def touch_ended(self, touch):
 		touch_loc = self.menu_bg.point_from_scene(touch.location)

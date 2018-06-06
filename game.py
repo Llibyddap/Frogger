@@ -1,3 +1,8 @@
+# Ethan Armstrong
+# w.ethan.armstrong@gmail.com
+# explosion33
+# June 5, 2018
+
 from scene import *
 import ui
 from frog import createFrog
@@ -77,7 +82,6 @@ class Game (Scene):
 			self.num.remove_from_parent()
 			self.num = None
 		
-		
 		if str(self.frog.parent)[0:9] == '<__main__':
 			self.frog.tile = (int(self.frog.position[0]/(self.size[0]/self.tilesW)), int(self.frog.position[1]/(self.size[1]/self.tilesH)))
 		elif True == False:
@@ -95,10 +99,6 @@ class Game (Scene):
 	def touch_began(self, touch):
 		self.touch1 = touch
 		
-		
-				
-
-			
 	def touch_ended(self, touch):
 		if self.touchEnabled == True:
 			tx1, ty1 = self.touch1.location
@@ -125,15 +125,13 @@ class Game (Scene):
 				move_action = Action.move_to(x,y, 0.05, TIMING_SINODIAL)
 				self.frog.run_action(move_action)	
 			
-				
 			elif (ty1 - ty2) > 10 and self.frog.tile[1] > 0: 		
 				x,y = self.frog.position
 				y -= self.height/self.tilesH
 			
 				move_action = Action.move_to(x,y, 0.05, TIMING_SINODIAL)
 				self.frog.run_action(move_action)
-				
-							
+					
 	def createCars(self):
 		for i in range(0,4):
 			if self.car1[i] == 0:
@@ -200,7 +198,6 @@ class Game (Scene):
 		A2 = Action.fade_to(0, 1.3, TIMING_LINEAR)
 		A3 = Action.remove()
 
-		
 		flash = Action.sequence(A1,A2,A3)
 		
 		white.run_action(flash)
@@ -285,8 +282,5 @@ class Game (Scene):
 				self.frog.remove_from_parent()
 				self.frog.position = (x,y)
 		"""			
-																
-													
-			
+
 run(Game(), show_fps = True)									
-		
